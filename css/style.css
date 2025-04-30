@@ -1,0 +1,242 @@
+/* Ogólne ustawienia */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f4f7fa;
+    color: #333;
+    line-height: 1.6;
+    font-size: 16px;
+    margin: 0;
+}
+
+header {
+    background-color: #3b5998;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    user-select: none;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color:black;
+}
+
+header p {
+    font-size: 1.5rem;
+    color: #000000;
+}
+
+
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+@keyframes borderAnimation {
+    0% {
+        border-bottom: #3b5998 solid 8px;
+        border-left: #3b5998 solid 12px;
+    }
+    50% {
+        border-bottom: #5b7fcd solid 8px;
+        border-left: #5b7fcd solid 12px;
+    }
+    100% {
+        border-bottom: #284b96 solid 8px;
+        border-left: #284b96 solid 12px;
+    }
+}
+
+@font-face {
+    font-family: 'Norvay';
+    src: url('Borisna.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+.jiggle{
+    text-align: center;
+    font-size:3vmin;
+    display: inline-block;
+    letter-spacing: 10px;
+    transform: scaleX(4) translateX(5%);
+    font-family: 'Norvay', sans-serif;
+
+}
+#centering{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.imgit{
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    section h2 {
+        font-size: 2rem;
+    }
+    .project {
+        padding: 15px;
+    }
+    .project p{
+        font-size: clamp(1rem, 2vw, 2rem);
+    }
+    .project h3{
+        font-size: clamp(1.3rem, 2vw, 2rem);
+    }
+    #text{
+        font-size: clamp(0.8rem, 2vw, 2rem);
+
+    }
+    .container {
+        width: 95%;
+    }
+    .imgit{
+        display: none;
+    }
+}
+
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+#text {
+    overflow: hidden;
+    white-space: nowrap; /* Zapewnia, że tekst nie będzie łamał się na nową linię */
+    border-right: 4px solid black;
+    animation: typing 4s steps(30) 1s 1 normal both; /* Efekt pisania */
+    font-family: 'Courier New', Courier, monospace; /* Czcionka przypominająca terminal */
+    text-align: center;
+}
+
+.categor {
+    width: 100%; /* Pełna szerokość rodzica */
+    position: relative; 
+}
+
+
+#bar{
+    height:1vmin;
+    background-color: rgb(34, 34, 34);
+}
+#bar2{
+    height:70px;
+    background-color: rgb(196, 196, 196);
+    border-bottom: solid black 1px;
+    display: flex;
+    text-align: left;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y:hidden;
+}
+
+
+button{
+    border: none;
+    background-color: none;
+}
+
+.buttonss{
+    background-color: rgba(0,0,0,0.01);
+    font-size:30px;
+    margin:1vmin;
+    margin-left: 3vmin;
+    margin-right: 3vmin;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.filters {
+    background-color: #f0f8ff; 
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 64, 128, 0.1);
+    max-width: 300px;
+    font-family: 'Segoe UI', sans-serif;
+    color: #003366;
+  }
+@media (max-width: 600px){
+    .filters {
+        display: flex;
+        flex-wrap: wrap;  
+        flex-direction: column;        
+        gap: 10px;   
+        background-color: #f0f8ff;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 64, 128, 0.1);
+        font-family: 'Segoe UI', sans-serif;
+        color: #003366;
+        width:100%;
+      }
+      
+}
+  .filters h2 {
+    margin-bottom: 16px;
+    color: #002244;
+    font-size: 1.2em;
+    border-bottom: 1px solid #cce0f5;
+    padding-bottom: 8px;
+  }
+  
+  .filters label {
+    display: block;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  
+  .filters input[type="checkbox"] {
+    margin-right: 8px;
+    accent-color: #007acc; /* niebieski checkbox */
+  }
+  
+  .filters select {
+    width: 100%;
+    padding: 8px;
+    margin: 12px 0;
+    border: 1px solid #007acc;
+    border-radius: 6px;
+    background-color: #ffffff;
+    color: #003366;
+  }
+  
+  .filters button {
+    background-color: #007acc;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .filters button:hover {
+    background-color: #005f99;
+  }
