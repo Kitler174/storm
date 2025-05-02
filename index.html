@@ -15,66 +15,100 @@
     </header>
     <div id="bar"></div>
     <div id="bar2">
-        <button class="buttonss" onclick="openb(1)">Kategoria</button>
-        <button class="buttonss" onclick="openb(2)">Producent</button>
-        <button class="buttonss" onclick="openb(3)">Rozmiar ramy</button>
-        <button class="buttonss" onclick="openb(4)">Rodzaj przerzutki</button>
-        <button class="buttonss" onclick="openb(5)">Rozmiar kół</button>
-        <button class="buttonss" onclick="openb(6)">Amortyzator</button>
-        <button class="buttonss" onclick="openb(7)">Hamulce</button>
-        <button class="buttonss" onclick="openb(8)">Lakier</button>
-        <button class="buttonss" onclick="openb(9)">Rama roweru</button>
+        <button class="buttonss" onclick="openb(1,this)">Kategoria</button>
+        <button class="buttonss" onclick="openb(2,this)">Producent</button>
+        <button class="buttonss" onclick="openb(3,this)">Rozmiar ramy</button>
+        <button class="buttonss" onclick="openb(4,this)">Rodzaj przerzutki</button>
+        <button class="buttonss" onclick="openb(5,this)">Rozmiar kół</button>
+        <button class="buttonss" onclick="openb(6,this)">Amortyzator</button>
+        <button class="buttonss" onclick="openb(7,this)">Hamulce</button>
+        <button class="buttonss" onclick="openb(8,this)">Lakier</button>
+        <button class="buttonss" onclick="openb(9,this)">Rama roweru</button>
 
     </div>
     <form>
         <div style="display: none;" id="but1" class="filters">
             <h2>Filtruj po: kategoria</h2>
-            <label><input type="checkbox"> Opcja 1</label>
-            <label><input type="checkbox"> Opcja 2</label>
-            <label><input type="checkbox"> Opcja 1</label>
-            <label><input type="checkbox"> Opcja 2</label>
+            <input type="checkbox" id="checkbox1" name="group1" />
+            <label for="checkbox1">Opcja 1 - Grupa 1</label>
+            
+            <input type="checkbox" id="checkbox2" name="group1" />
+            <label for="checkbox2">Opcja 2 - Grupa 1</label>
         </div>
+        
         <div style="display: none;" id="but2" class="filters">
             <h2>Filtruj po: producent</h2>
-            <label><input type="checkbox"> Opcja 1</label>
-            <label><input type="checkbox"> Opcja 2</label>
+            <input type="checkbox" id="checkbox3" name="group2" />
+            <label for="checkbox3">Opcja 1 - Grupa 2</label>
+            
+            <input type="checkbox" id="checkbox4" name="group2" />
+            <label for="checkbox4">Opcja 2 - Grupa 2</label>
         </div>
+        
         <div style="display: none;" id="but3" class="filters">
             <h2>Filtruj po: rozmiar ramy</h2>
-            <label><input type="checkbox"> Opcja 1</label>
-            <label><input type="checkbox"> Opcja 2</label>
+            <input type="checkbox" id="checkbox5" name="group3" />
+            <label for="checkbox5">Opcja 1 - Grupa 3</label>
+            
+            <input type="checkbox" id="checkbox6" name="group3" />
+            <label for="checkbox6">Opcja 2 - Grupa 3</label>
         </div>
+        
         <div style="display: none;" id="but4" class="filters">
             <h2>Filtruj po: rodzaj przerzutki</h2>
-            <label><input type="checkbox"> Opcja 1</label>
-            <label><input type="checkbox"> Opcja 2</label>
+            <input type="checkbox" id="checkbox7" name="group4" />
+            <label for="checkbox7">Opcja 1 - Grupa 4</label>
+            
+            <input type="checkbox" id="checkbox8" name="group4" />
+            <label for="checkbox8">Opcja 2 - Grupa 4</label>
         </div>
+        
         <div style="display: none;" id="but5" class="filters">
             <h2>Filtruj po: rozmiar kół</h2>
-            <label><input type="checkbox"> Opcja 1</label>
-            <label><input type="checkbox"> Opcja 2</label>
+            <input type="checkbox" id="checkbox9" name="group5" />
+            <label for="checkbox9">Opcja 1 - Grupa 5</label>
+            
+            <input type="checkbox" id="checkbox10" name="group5" />
+            <label for="checkbox10">Opcja 2 - Grupa 5</label>
         </div>
+        
         <div style="display: none;" id="but6" class="filters">
             <h2>Filtruj po: amortyzator</h2>
-            <label><input type="checkbox"> Opcja 1</label>
-            <label><input type="checkbox"> Opcja 2</label>
+            <input type="checkbox" id="checkbox11" name="group6" />
+            <label for="checkbox11">Opcja 1 - Grupa 6</label>
+            
+            <input type="checkbox" id="checkbox12" name="group6" />
+            <label for="checkbox12">Opcja 2 - Grupa 6</label>
         </div>
+        
         <div style="display: none;" id="but7" class="filters">
             <h2>Filtruj po: hamulce</h2>
-            <label><input type="checkbox"> Opcja 1</label>
-            <label><input type="checkbox"> Opcja 2</label>
+            <input type="checkbox" id="checkbox13" name="group7" />
+            <label for="checkbox13">Opcja 1 - Grupa 7</label>
+            
+            <input type="checkbox" id="checkbox14" name="group7" />
+            <label for="checkbox14">Opcja 2 - Grupa 7</label>
         </div>
+        
         <div style="display: none;" id="but8" class="filters">
             <h2>Filtruj po: lakier</h2>
-            <label><input type="checkbox"> Opcja 1</label>
-            <label><input type="checkbox"> Opcja 2</label>
+            <input type="checkbox" id="checkbox15" name="group8" />
+            <label for="checkbox15">Opcja 1 - Grupa 8</label>
+            
+            <input type="checkbox" id="checkbox16" name="group8" />
+            <label for="checkbox16">Opcja 2 - Grupa 8</label>
         </div>
+        
         <div style="display: none;" id="but9" class="filters">
             <h2>Filtruj po: rama roweru</h2>
-            <label><input type="checkbox"> Opcja 1</label>
-            <label><input type="checkbox"> Opcja 2</label>
+            <input type="checkbox" id="checkbox17" name="group9" />
+            <label for="checkbox17">Opcja 1 - Grupa 9</label>
+            
+            <input type="checkbox" id="checkbox18" name="group9" />
+            <label for="checkbox18">Opcja 2 - Grupa 9</label>
         </div>
-        </form>
+    </form>
+    
     <div class="container">  
 
     </div>

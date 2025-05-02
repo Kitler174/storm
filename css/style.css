@@ -23,10 +23,9 @@ header {
 }
 
 header h1 {
-    font-size: 3rem;
     margin-bottom: 10px;
     font-weight: bold;
-    color:black;
+    color:rgb(255, 255, 255);
 }
 
 header p {
@@ -65,10 +64,10 @@ header p {
   }
 .jiggle{
     text-align: center;
-    font-size:3vmin;
+    font-size:5vmin;
     display: inline-block;
     letter-spacing: 10px;
-    transform: scaleX(4) translateX(5%);
+    transform: scaleX(3) translateX(5%);
     font-family: 'Norvay', sans-serif;
 
 }
@@ -129,6 +128,7 @@ header p {
 
 #text {
     overflow: hidden;
+    color: white;
     white-space: nowrap; /* Zapewnia, że tekst nie będzie łamał się na nową linię */
     border-right: 4px solid black;
     animation: typing 4s steps(30) 1s 1 normal both; /* Efekt pisania */
@@ -206,16 +206,6 @@ button{
     padding-bottom: 8px;
   }
   
-  .filters label {
-    display: block;
-    margin-bottom: 10px;
-    cursor: pointer;
-  }
-  
-  .filters input[type="checkbox"] {
-    margin-right: 8px;
-    accent-color: #007acc; /* niebieski checkbox */
-  }
   
   .filters select {
     width: 100%;
@@ -240,3 +230,25 @@ button{
   .filters button:hover {
     background-color: #005f99;
   }
+
+  input[type="checkbox"] {
+    display: none;
+}
+
+/* Styl label - tło i kolor tekstu domyślne */
+label {
+    user-select: none;
+    font-size: 18px;
+    color: black;
+    padding: 5px;
+    display: inline-block;
+    cursor: pointer;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+input[type="checkbox"]:checked + label {
+    color: green; /* Zielony kolor tekstu */
+    background-color: lightgreen; /* Zielone tło */
+}

@@ -36,13 +36,34 @@ function getCookie(name) {
     return 0;
 }
 var lastopb = 0
-function openb(inde){
-    console.log(inde)
-    document.querySelectorAll('.filters').forEach(el => {
-        el.style.display = 'none';
-      });
-    var el = document.getElementById("but"+inde);
-    console.log(el)
-    el.style.display = "block"
-    document.getElementById("but"+lastopb).style.display="none";
+var act = 0;
+function openb(inde,th){
+    if (lastopb != inde){
+        console.log(inde)
+        document.querySelectorAll('.filters').forEach(el => {
+            el.style.display = 'none';
+        });
+        document.querySelectorAll('.buttonss').forEach(el => {
+            el.style.color = "black"
+        });
+
+        var el = document.getElementById("but"+inde);
+        el.style.display = "block"
+        th.style.color = "purple"
+        if (lastopb != 0){
+            console.log(th)
+            document.getElementById("but"+lastopb).style.display="none";
+            lastopb = 0;
+        }
+        else{
+            lastopb = inde; 
+        }
+    }
+    else{
+        th.style.color = "black"
+        document.querySelectorAll('.filters').forEach(el => {
+            el.style.display = 'none';
+        });
+        lastopb = 0;
+    }
 }
