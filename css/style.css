@@ -196,6 +196,7 @@ button{
 
 
 .el {
+    cursor: pointer;
     width: 500px;
     height: 500px;
     border: solid black 1px;
@@ -225,6 +226,24 @@ button{
   .el p {
     transition: opacity 0.3s ease-in-out;
   }
+.el button{
+    cursor: pointer;
+    position: absolute;
+    display: flex;
+    left:50%;
+    bottom: -50px;
+    transform: translateX(-50%);
+    align-items: center;
+    justify-content: center;
+    transition: all 0.6s ease-in-out;
+    height: 25px;
+    border: black solid 2px;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 20px;
+    background-color: white;
+    color: black;
+}
   
 @media (max-width: 600px){
     .filters {

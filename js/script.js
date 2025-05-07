@@ -83,8 +83,8 @@ document.addEventListener('DOMContentLoaded', function () {
         const img = el.querySelector('img');
         const h1 = el.querySelector('h1');
         const p = el.querySelector('p');
-
         img.style.top = (h1.offsetHeight + p.offsetHeight + 5) + 'px';  // Dodajemy wysokość h1 i p do top
+
     });
 
     // Iteruj po każdym elemencie .el
@@ -92,12 +92,15 @@ document.addEventListener('DOMContentLoaded', function () {
         const p = el.querySelector('p');
         const h1 = el.querySelector('h1');
         const img = el.querySelector('img');
+        const button = el.querySelector('.cool');
 
         // Po najechaniu na element .el
         el.addEventListener('mouseenter', async () => {
             p.style.opacity = '0';
             h1.style.opacity = '0';
             img.style.marginTop = -(h1.offsetHeight + p.offsetHeight) + 'px'; // Ustawienie marginesu górnego obrazu
+            button.style.left = "50%"
+            button.style.transform = 'translate(-50%,-70px)';
         });
 
         // Po wyjściu z .el – przywróć widoczność elementów
@@ -106,6 +109,10 @@ document.addEventListener('DOMContentLoaded', function () {
             h1.style.opacity = '1';
             p.style.opacity = '1';
             img.style.marginTop = '0';  // Resetowanie marginTop
+            button.style.marginTop = (h1.offsetHeight + p.offsetHeight) + 'px';  // Dodajemy wysokość h1 i p do top
+            button.style.left = "50%"
+            button.style.transform = 'translate(-50%,70px)';
+
         });
     });
 });
